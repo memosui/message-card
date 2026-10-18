@@ -36,13 +36,13 @@ cardData.forEach((data) => {
     </div>
   `;
 
-  // タップ時の処理
-  card.addEventListener("click", () => {
+  // タップ時の処理（何度押してもモーダルが開くように修正）
+  wrapper.addEventListener("click", () => {
     // 初回タップ時はカードをひっくり返す
     if (!card.classList.contains("is-flipped")) {
       card.classList.add("is-flipped");
     }
-    // ひっくり返った状態でも、毎回モーダルを開く
+    // ひっくり返った後でも毎回モーダルを表示する
     openModal(data.id, data.text);
   });
 
