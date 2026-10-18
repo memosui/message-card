@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メッセージカード</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="site-title">メッセージカード</h1>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <p class="instruction">カードをタップしてメッセージを開いてね</p>
+      
+      <!-- カードグリッド (2列×5行) -->
+      <div class="card-grid" id="cardGrid"></div>
+    </div>
+  </main>
+
+  <!-- モーダル（ポップアップ） -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="閉じる">×</button>
+      <div class="modal-header">
+        <span class="modal-number-badge" id="modalNumberBadge"></span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-text" id="modalText"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
