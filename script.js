@@ -38,11 +38,12 @@ cardData.forEach((data) => {
 
   // タップ時の処理
   card.addEventListener("click", () => {
-    // まだめくられていない場合のみ実行
+    // 初回タップ時はカードをひっくり返す
     if (!card.classList.contains("is-flipped")) {
       card.classList.add("is-flipped");
-      openModal(data.id, data.text);
     }
+    // ひっくり返った状態でも、毎回モーダルを開く
+    openModal(data.id, data.text);
   });
 
   wrapper.appendChild(card);
